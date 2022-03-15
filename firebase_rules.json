@@ -7,7 +7,7 @@
     ".write": true
   }
 }"},
-
+{
 "description":"// Full security",
 "code":"
   "rules": {
@@ -15,7 +15,7 @@
     ".write": false
   }
 }"},
-
+<
 "description":"// Only authenticated users can access/write data",
 "code":"
   "rules": {
@@ -23,7 +23,7 @@
     ".write": "auth != null"
   }
 }"},
-
+{
 "description":"// Checks auth uid equals database node uid
 "description":"// In other words, the User can only access their own data",
 "code":"
@@ -36,7 +36,7 @@
      }
    }
 }"},
-
+{
 "description":"// Validates user is moderator from different database location",
 "code":"
   "rules": {
@@ -47,7 +47,7 @@
      }
    }
 }"},
-
+{
 "description":"// Validates string datatype and length range",
 "code":"
   "rules": {
@@ -60,7 +60,7 @@
      }
    }
 }"},
-
+{
 "description":"// Checks presense of child attributes",
 "code":"
   "rules": {
@@ -71,7 +71,7 @@
      }
    }
 }"},
-
+{
 "description":"// Validates timestamp is not a future value",
 "code":"
   "rules": {
@@ -84,8 +84,7 @@
      }
    }
 }"},
-
-
+{
 "description":"// Prevents Delete or Update"},
 {"code":"
   "rules": {
@@ -96,7 +95,7 @@
      }
    }
 }"},
-
+{
 "description":"// Prevents only Delete"},
 {"code":"
   "rules": {
@@ -107,7 +106,7 @@
      }
    }
 }"},
-
+{
 "description":"// Prevents only Update"},
 {"code":"
   "rules": {
@@ -118,7 +117,7 @@
      }
    }
 }"},
-
+{
 "description":"// Prevents Create and Delete"},
 {"code":"
   "rules": {
