@@ -24,8 +24,7 @@
   }
 }"},
 {
-"description":"// Checks auth uid equals database node uid
-"description":"// In other words, the User can only access their own data",
+"description":"// Checks auth uid equals database node uid In other words, the User can only access their own data",
 "code":"
   "rules": {
     "posts": {
