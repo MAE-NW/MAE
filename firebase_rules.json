@@ -84,8 +84,8 @@
    }
 }"},
 {
-"description":"// Prevents Delete or Update"},
-{"code":"
+"description":"// Prevents Delete or Update",
+   "code":"
   "rules": {
     "posts": {
        "$uid": {
@@ -95,8 +95,8 @@
    }
 }"},
 {
-"description":"// Prevents only Delete"},
-{"code":"
+"description":"// Prevents only Delete",
+   "code":"
   "rules": {
     "posts": {
        "$uid": {
@@ -106,8 +106,8 @@
    }
 }"},
 {
-"description":"// Prevents only Update"},
-{"code":"
+"description":"// Prevents only Update",
+   "code":"
   "rules": {
     "posts": {
        "$uid": {
@@ -117,8 +117,8 @@
    }
 }"},
 {
-"description":"// Prevents Create and Delete"},
-{"code":"
+"description":"// Prevents Create and Delete",
+  "code":"
   "rules": {
     "posts": {
        "$uid": {
