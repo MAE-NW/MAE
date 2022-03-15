@@ -1,0 +1,133 @@
+[
+{
+"description":"// No Security",
+"code":"
+  "rules": {
+    ".read": true,
+    ".write": true
+  }
+}"},
+
+"description":"// Full security",
+"code":"
+  "rules": {
+    ".read": false,
+    ".write": false
+  }
+}"},
+
+"description":"// Only authenticated users can access/write data",
+"code":"
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+}"},
+
+"description":"// Checks auth uid equals database node uid
+"description":"// In other words, the User can only access their own data",
+"code":"
+  "rules": {
+    "posts": {
+       "$uid": {
+         ".read": "$uid === auth.uid",
+         ".write": "$uid === auth.uid"
+       }
+     }
+   }
+}"},
+
+"description":"// Validates user is moderator from different database location",
+"code":"
+  "rules": {
+    "posts": {
+       "$uid": {
+         ".write": "root.child('users').child('moderator').val() === true"
+       }
+     }
+   }
+}"},
+
+"description":"// Validates string datatype and length range",
+"code":"
+  "rules": {
+    "posts": {
+       "$uid": {
+         ".validate": "newData.isString() 
+                       && newData.val().length > 0
+                       && newData.val().length <= 140"
+       }
+     }
+   }
+}"},
+
+"description":"// Checks presense of child attributes",
+"code":"
+  "rules": {
+    "posts": {
+       "$uid": {
+         ".validate": "newData.hasChildren(['username', 'timestamp'])"
+       }
+     }
+   }
+}"},
+
+"description":"// Validates timestamp is not a future value",
+"code":"
+  "rules": {
+    "posts": {
+       "$uid": {
+         "timestamp": { 
+           ".validate": "newData.val() <= now" 
+         }
+       }
+     }
+   }
+}"},
+
+
+"description":"// Prevents Delete or Update"},
+{"code":"
+  "rules": {
+    "posts": {
+       "$uid": {
+         ".write": "!data.exists()"
+       }
+     }
+   }
+}"},
+
+"description":"// Prevents only Delete"},
+{"code":"
+  "rules": {
+    "posts": {
+       "$uid": {
+         ".write": "newData.exists()"
+       }
+     }
+   }
+}"},
+
+"description":"// Prevents only Update"},
+{"code":"
+  "rules": {
+    "posts": {
+       "$uid": {
+         ".write": "!data.exists() || !newData.exists()"
+       }
+     }
+   }
+}"},
+
+"description":"// Prevents Create and Delete"},
+{"code":"
+  "rules": {
+    "posts": {
+       "$uid": {
+         ".write": "data.exists() && newData.exists()"
+       }
+     }
+   }
+}"}
+]
+
