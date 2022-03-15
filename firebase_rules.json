@@ -1,6 +1,6 @@
 [
 {
-"description":"// No Security",
+"description":"No Security",
 "code":"
   "rules": {
     ".read": true,
@@ -8,7 +8,7 @@
   }
 }"},
 {
-"description":"// Full security",
+"description":"Full security",
 "code":"
   "rules": {
     ".read": false,
@@ -16,7 +16,7 @@
   }
 }"},
 <
-"description":"// Only authenticated users can access/write data",
+"description":"Only authenticated users can access/write data",
 "code":"
   "rules": {
     ".read": "auth != null",
@@ -24,7 +24,7 @@
   }
 }"},
 {
-"description":"// Checks auth uid equals database node uid In other words, the User can only access their own data",
+"description":"Checks auth uid equals database node uid In other words, the User can only access their own data",
 "code":"
   "rules": {
     "posts": {
@@ -36,7 +36,7 @@
    }
 }"},
 {
-"description":"// Validates user is moderator from different database location",
+"description":"Validates user is moderator from different database location",
 "code":"
   "rules": {
     "posts": {
@@ -47,7 +47,7 @@
    }
 }"},
 {
-"description":"// Validates string datatype and length range",
+"description":"Validates string datatype and length range",
 "code":"
   "rules": {
     "posts": {
@@ -60,7 +60,7 @@
    }
 }"},
 {
-"description":"// Checks presense of child attributes",
+"description":"Checks presense of child attributes",
 "code":"
   "rules": {
     "posts": {
@@ -71,7 +71,7 @@
    }
 }"},
 {
-"description":"// Validates timestamp is not a future value",
+"description":"Validates timestamp is not a future value",
 "code":"
   "rules": {
     "posts": {
@@ -84,7 +84,7 @@
    }
 }"},
 {
-"description":"// Prevents Delete or Update",
+"description":"Prevents Delete or Update",
    "code":"
   "rules": {
     "posts": {
@@ -95,7 +95,7 @@
    }
 }"},
 {
-"description":"// Prevents only Delete",
+"description":"Prevents only Delete",
    "code":"
   "rules": {
     "posts": {
@@ -106,7 +106,7 @@
    }
 }"},
 {
-"description":"// Prevents only Update",
+"description":"Prevents only Update",
    "code":"
   "rules": {
     "posts": {
@@ -117,7 +117,7 @@
    }
 }"},
 {
-"description":"// Prevents Create and Delete",
+"description":"Prevents Create and Delete",
   "code":"
   "rules": {
     "posts": {
